@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sim Returns Demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: Georgia, "Times New Roman", serif;
+        background: #f4efe6;
+        color: #1f1a17;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1;
+      }
+
+      p {
+        max-width: 60ch;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .demo-shell {
+        margin-top: 24px;
+      }
+    </style>
+    <script type="module" src="./dist/sim-returns.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Sim Returns Demo</h1>
+      <p>
+        Local manual test page for the embeddable app. The intended production
+        embed is one line: <code>&lt;sim-returns-app&gt;&lt;/sim-returns-app&gt;</code>.
+      </p>
+      <div class="demo-shell">
+        <sim-returns-app></sim-returns-app>
+      </div>
+    </main>
+  </body>
+</html>
