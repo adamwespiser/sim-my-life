@@ -6,3 +6,4 @@
 - Completed `P0.3` by resolving the remaining MVP open questions in [spec.md](/Users/adamwespiser/projects/sim-my-life/docs/spec.md): fixed-dollars mode now initializes from current annual spending when provided, and shareable URL state is explicitly out of scope for v1.
 - Completed `P1.1` by adding [package.json](/Users/adamwespiser/projects/sim-my-life/package.json) and placeholder `build`, `test`, and `verify` scripts that establish the repo's initial command surface for later Vite and test-runner wiring.
 - Completed `P1.2` by adding [tsconfig.json](/Users/adamwespiser/projects/sim-my-life/tsconfig.json), the initial `src/` and `test/` tree, installing TypeScript, and verifying `npm run typecheck` succeeds without configuration errors.
+- Completed `P1.3` by adding a minimal Biome-based lint/format setup, wiring `lint`, `format`, and `format:check` scripts, and verifying both checks pass.
