@@ -9,6 +9,7 @@ export const historicalReturnsMetadata = {
   sourceName: "Aswath Damodaran historical returns table",
   sourceUpdatedAt: "2026-01-05",
   sourceUrl: "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html",
+  version: "damodaran-sp500-tr-1928-2025-v1",
 } as const;
 
 const rawHistoricalReturns = [

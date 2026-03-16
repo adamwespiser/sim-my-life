@@ -16,3 +16,4 @@
 - Completed `P1.10` by adding [src/styling/base-styles.ts](/Users/adamwespiser/projects/sim-my-life/src/styling/base-styles.ts), proving the Shadow DOM base layer with a failing-first snapshot test, and verifying `npm test`, `npm run typecheck`, and `npm run format:check` all pass.
 - Completed `P1.11` by adding a host-theme override fixture and DOM test that proves a host-set `--sr-color-accent` custom property flows into the Shadow DOM without relying on host structural CSS.
 - Completed `P2.1` by adding the bundled historical S&P 500 total-return dataset and metadata in [src/data/historical-returns.ts](/Users/adamwespiser/projects/sim-my-life/src/data/historical-returns.ts), with a test proving the data loads from code rather than runtime fetches.
+- Completed `P2.2` by extending the dataset test suite to lock the record count, coverage years, first/last records, and metadata version so later refreshes have a concrete integrity baseline.
