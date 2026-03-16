@@ -19,3 +19,4 @@
 - Completed `P2.2` by extending the dataset test suite to lock the record count, coverage years, first/last records, and metadata version so later refreshes have a concrete integrity baseline.
 - Completed `P2.3` by documenting the manual dataset refresh workflow in [data-refresh.md](/Users/adamwespiser/projects/sim-my-life/docs/data-refresh.md) and linking it from the spec's data packaging section.
 - Completed `P2.4` by defining the first shared domain contracts in [src/domain/types.ts](/Users/adamwespiser/projects/sim-my-life/src/domain/types.ts) for retirement modes, scenario input, yearly path points, and batch results, with a passing test and typecheck validation.
+- Completed `P2.5` by adding [src/domain/scenario-validation.ts](/Users/adamwespiser/projects/sim-my-life/src/domain/scenario-validation.ts) with normalization and validation rules for numeric inputs and retirement-year boundaries, backed by failing-first tests.
