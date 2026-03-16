@@ -72,6 +72,11 @@ Recommended supporting inputs for v1:
 
 - `Current annual spending` as a convenience action to prefill the fixed-dollars retirement spending field
 
+Fixed-dollars default behavior:
+
+- if `Current annual spending` is provided, fixed-dollars mode should initialize the retirement spending target from that value
+- otherwise, use the configured fixed-dollars default scenario value
+
 Savings input rule:
 
 - v1 should expose annual savings only in the UI
@@ -199,6 +204,35 @@ Retirement spending timing for v1:
 Note:
 
 - this intentionally departs from the R script's monthly mechanics in favor of a simpler annual planning model that is easier to explain and faster to compute
+
+### 6.3.1 Hovered-Year Distribution Formulas
+
+For a hovered year, the three required distributions should be derived from each simulated path using these exact yearly values:
+
+- `investment income this year`
+  the dollar gain or loss caused by market performance before contributions or withdrawals for that year
+- formula:
+  `investment_income = starting_balance_for_year * annual_return`
+
+- `retirement withdrawals this year`
+  the actual dollars withdrawn during that year after annual growth is applied
+- for accumulation years:
+  `retirement_withdrawals = 0`
+- for fixed-dollars retirement years:
+  `retirement_withdrawals = min(planned_annual_spending_for_year, balance_after_growth)`
+- for percent-of-portfolio retirement years:
+  `retirement_withdrawals = min(withdrawal_rate * balance_after_growth, balance_after_growth)`
+
+- `account assets this year`
+  the end-of-year portfolio balance after that year's growth and contribution or withdrawal activity
+- formula:
+  `account_assets = ending_balance_for_year`
+
+Definitions used above:
+
+- `starting_balance_for_year` is the balance at the start of the hovered year
+- `balance_after_growth` is the balance immediately after applying the sampled annual return and before contribution or withdrawal activity
+- `ending_balance_for_year` is the balance after the full annual step is complete
 
 ### 6.4 Retirement Strategy Modes
 
@@ -393,6 +427,44 @@ Target current evergreen browsers:
 - current Firefox
 - current Edge
 
+### 8.6 Charting Dependency
+
+The app should use `uPlot` as the charting library for v1.
+
+Reason for choosing `uPlot`:
+
+- it aligns with the single-bundle constraint better than heavier charting libraries
+- it is well-suited to fast line rendering and progressive updates
+- it is a strong fit for the primary simulation chart, which is the most performance-sensitive visualization in the app
+
+Dependency rule:
+
+- prefer `uPlot` for the main path chart and related chart rendering needs
+- do not introduce a second major charting library in v1 unless `uPlot` proves unable to support a required visualization within the size and performance budgets
+
+### 8.7 CSS Strategy
+
+The app should follow the CSS strategy documented in [css-strategy.md](/Users/adamwespiser/projects/sim-my-life/docs/css-strategy.md).
+
+Required CSS rules for v1:
+
+- use plain CSS inside the custom element's Shadow DOM
+- do not use Tailwind, CSS-in-JS, Sass, or another styling framework in v1
+- keep all required styles bundled with the JavaScript bundle
+- define a small design-token layer using CSS custom properties
+- expose only a minimal documented host-theming surface through custom properties on the custom element
+- do not rely on host-page global styles for correct rendering
+
+### 8.8 Bundling Tool
+
+The app should use `Vite` for bundling in v1.
+
+Bundling rules:
+
+- use `Vite` as the primary build tool for local development and production bundling
+- the final output must still satisfy the single-JavaScript-bundle requirement for the app
+- do not introduce a framework runtime just because `Vite` is used as the bundler
+
 ## 9. Performance Requirements
 
 The experience should remain responsive at default settings.
@@ -463,6 +535,7 @@ Recommended testing layers:
 
 - unit tests for pure simulation logic
 - component or DOM tests for the embeddable custom element
+- component snapshot tests at the DOM level by serializing Shadow DOM output after render
 - one lightweight integration or smoke test using `demo.html` assumptions
 
 Testing philosophy:
@@ -470,6 +543,7 @@ Testing philosophy:
 - the simulation logic should be testable separately from rendering
 - browser rendering details do not need pixel-perfect tests
 - high-value tests should focus on correctness of model behavior and embed reliability
+- snapshot tests should catch structural regressions such as missing sections, mode-switching breakage, field visibility changes, and Shadow DOM markup drift
 
 ## 13. Proposed MVP Feature Set
 
@@ -549,17 +623,17 @@ The MVP is done when all of the following are true:
 
 ## 17. Open Questions
 
-These need confirmation before implementation starts:
+No MVP-blocking open questions remain.
 
-1. Should the fixed-dollars mode default to using current annual spending as the initial retirement spending target?
-2. Do you want shareable URL state in v1?
+Resolved MVP decisions:
+
+- fixed-dollars mode should initialize from `Current annual spending` when that convenience input is provided
+- shareable URL state is out of scope for v1
 
 ## 18. Recommended Next Step
 
 Before writing code, revise this draft into implementation-ready v0.3 by:
 
 1. locking the retirement-phase inputs and outputs
-2. defining the fixed-dollars inflation control and default behavior
-3. deciding whether shareable URLs and presets belong in v1
-4. choosing the TypeScript test stack and minimum test matrix
-5. defining the one-time dataset refresh workflow and logging verbosity defaults
+2. choosing the TypeScript test stack and minimum test matrix
+3. defining the one-time dataset refresh workflow and logging verbosity defaults

@@ -34,13 +34,15 @@ Before implementing code
 Loop:
 
 1. Identify the next incomplete task.
-2. Implement the task.
-3. Verify the implementation (tests/build).
-4. Fix any issues.
-5. Mark the task complete in the plan.
-6. Commit the changes.
-7. If additional tasks are required, add them to the plan.
-8. Continue until all tasks are complete.
+2. Write or update a test that defines the intended behavior.
+3. Run the test and confirm it fails for the expected reason.
+4. Implement the task.
+5. Verify the implementation (tests/build).
+6. Fix any issues.
+7. Mark the task complete in the plan.
+8. Commit the changes.
+9. If additional tasks are required, add them to the plan.
+10. Continue until all tasks are complete.
 
 Prefer small safe changes over large refactors.
 Use tests and verification as ground truth.

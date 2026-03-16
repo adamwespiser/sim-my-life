@@ -21,7 +21,11 @@
 - Embed through a custom element and isolate the app in Shadow DOM.
 - Include a local `demo.html` for manual testing.
 - Include automated TypeScript tests for simulation behavior and embed behavior.
+- Include DOM-level component snapshot tests that serialize Shadow DOM output after render.
 - Include clear browser logging for lifecycle, simulation progress, seed resolution, and failures.
+- Use `uPlot` as the charting library for v1.
+- Use plain Shadow-DOM-scoped CSS with a small design-token system and a minimal host theming surface.
+- Use `Vite` as the bundler for v1.
 
 ## 3. Constraints
 
@@ -31,6 +35,9 @@
 - The UI should not expose a seed control; user-facing runs derive seed from Unix time in seconds.
 - Best/worst sampled runs should not be surfaced because they are not useful planning signals.
 - The app must work in simple generated HTML environments, including Markdown-to-HTML pages that only load the JS bundle and the custom element tag.
+- Avoid introducing a second major charting library in v1.
+- Avoid introducing a CSS framework in v1; styling should stay small and bundle-friendly.
+- Avoid introducing a frontend framework runtime; `Vite` is the bundler, not a UI framework choice.
 
 ## 4. Success Criteria
 
@@ -48,8 +55,9 @@
 - Retirement strategy logic for fixed-dollars and percent-of-portfolio modes.
 - Progressive run controller for chunked simulation and live updates.
 - Summary metrics layer for percentile outcomes, survival probability, and retirement-income outputs.
-- Visualization layer for path chart, percentile band, and three simultaneous hover-driven yearly distribution views.
+- Visualization layer using `uPlot` for the path chart and supporting chart views.
+- Token-driven Shadow DOM styling layer with documented host-page custom-property overrides.
 - Embeddable custom element with Shadow DOM isolation.
 - Logging utility for browser diagnostics.
-- TypeScript test suite covering model behavior and embed behavior.
+- TypeScript test suite covering model behavior, embed behavior, and Shadow DOM snapshot stability.
 - Local `demo.html` harness for manual validation.
