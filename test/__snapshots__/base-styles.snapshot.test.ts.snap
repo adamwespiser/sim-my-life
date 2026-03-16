@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`base Shadow DOM styles > renders a host-scoped style tag and shell markup 1`] = `
+"
+      <style>
+:host {
+  --sr-chart-band: rgba(15, 118, 110, 0.18);
+  --sr-chart-failure: #b42318;
+  --sr-chart-median: #0f766e;
+  --sr-chart-path: rgba(31, 26, 23, 0.14);
+  --sr-chart-retirement: #b7791f;
+  --sr-color-accent: #0f766e;
+  --sr-color-accent-soft: #d7efe9;
+  --sr-color-bg: #f4efe6;
+  --sr-color-border: rgba(31, 26, 23, 0.12);
+  --sr-color-fg: #1f1a17;
+  --sr-color-muted: #5b534d;
+  --sr-color-surface: #fffaf4;
+  --sr-font-body: Georgia, "Times New Roman", serif;
+  --sr-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --sr-motion-base: 180ms;
+  --sr-motion-fast: 120ms;
+  --sr-radius-lg: 24px;
+  --sr-radius-md: 16px;
+  --sr-radius-sm: 10px;
+  --sr-space-1: 4px;
+  --sr-space-2: 8px;
+  --sr-space-3: 12px;
+  --sr-space-4: 16px;
+  --sr-space-5: 24px;
+  --sr-space-6: 32px;
+  --sr-space-7: 48px;
+  --sr-space-8: 64px;
+  display: block;
+  inline-size: 100%;
+  box-sizing: border-box;
+  background: var(--sr-color-bg);
+  color: var(--sr-color-fg);
+  font-family: var(--sr-font-body);
+}
+
+:host([hidden]) {
+  display: none;
+}
+
+:host,
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
+}
+
+:host * {
+  min-width: 0;
+}
+
+:host button,
+:host input,
+:host select,
+:host textarea {
+  color: inherit;
+  font: inherit;
+}
+
+:host img,
+:host canvas,
+:host svg {
+  display: block;
+  max-inline-size: 100%;
+}
+</style>
+      <div class="fixture-shell">
+        <section>Base styles fixture</section>
+      </div>
+    "
+`;
