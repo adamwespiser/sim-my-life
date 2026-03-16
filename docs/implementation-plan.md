@@ -36,6 +36,7 @@ Purpose:
 - `P2.5` completed
 - `P2.6` completed
 - `P3.1` completed
+- `P3.2` completed
 
 ## Execution Rule
 
