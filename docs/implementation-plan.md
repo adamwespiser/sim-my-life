@@ -24,6 +24,7 @@ Purpose:
 - `P1.4` completed
 - `P1.5` completed
 - `P1.6` completed
+- `P1.7` completed
 
 ## Execution Rule
 
