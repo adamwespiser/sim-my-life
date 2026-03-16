@@ -17,3 +17,4 @@
 - Completed `P1.11` by adding a host-theme override fixture and DOM test that proves a host-set `--sr-color-accent` custom property flows into the Shadow DOM without relying on host structural CSS.
 - Completed `P2.1` by adding the bundled historical S&P 500 total-return dataset and metadata in [src/data/historical-returns.ts](/Users/adamwespiser/projects/sim-my-life/src/data/historical-returns.ts), with a test proving the data loads from code rather than runtime fetches.
 - Completed `P2.2` by extending the dataset test suite to lock the record count, coverage years, first/last records, and metadata version so later refreshes have a concrete integrity baseline.
+- Completed `P2.3` by documenting the manual dataset refresh workflow in [data-refresh.md](/Users/adamwespiser/projects/sim-my-life/docs/data-refresh.md) and linking it from the spec's data packaging section.

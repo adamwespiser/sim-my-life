@@ -159,6 +159,7 @@ Data packaging requirement:
 - the cleaned annual return series should live in the codebase as a canonical source file that is imported into the final bundle
 - the browser app should sample from that bundled dataset directly
 - the production app must not download the return history from the source site on each page load or each simulation run
+- the manual refresh workflow should be documented in [data-refresh.md](/Users/adamwespiser/projects/sim-my-life/docs/data-refresh.md)
 
 ### 6.2 Sampling Method
 
