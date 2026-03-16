@@ -8,6 +8,7 @@
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint .",
+    "size": "node scripts/check-bundle-size.mjs",
     "test": "node scripts/test-placeholder.mjs",
     "typecheck": "tsc --noEmit",
     "verify": "node scripts/verify-placeholder.mjs"
