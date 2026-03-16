@@ -5,6 +5,10 @@
   "scripts": {
     "build": "node scripts/build-placeholder.mjs",
     "test": "node scripts/test-placeholder.mjs",
+    "typecheck": "tsc --noEmit",
     "verify": "node scripts/verify-placeholder.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
   }
 }
