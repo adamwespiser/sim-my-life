@@ -1,1 +1,1 @@
-export {};
+export { uPlot } from "./charting/uplot";
