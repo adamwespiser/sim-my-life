@@ -7,13 +7,13 @@ export default defineConfig({
     lib: {
       entry: "src/main.ts",
       fileName: () => "sim-returns.js",
-      formats: ["es"]
+      formats: ["es"],
     },
     outDir: "dist",
     rollupOptions: {
       output: {
-        inlineDynamicImports: true
-      }
-    }
-  }
+        inlineDynamicImports: true,
+      },
+    },
+  },
 });

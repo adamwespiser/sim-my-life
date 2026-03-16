@@ -1,7 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "files": {
-    "ignoreUnknown": true
+    "ignoreUnknown": true,
+    "include": ["docs/**/*.md", "scripts/**/*.mjs", "src/**/*.ts", "test/**/*.ts", "*.json", "*.ts"]
   },
   "formatter": {
     "enabled": true,

@@ -14,7 +14,9 @@ let bundle;
 try {
   bundle = readFileSync(bundlePath);
 } catch (error) {
-  console.error("Bundle size check failed: dist/sim-returns.js was not found. Run npm run build first.");
+  console.error(
+    "Bundle size check failed: dist/sim-returns.js was not found. Run npm run build first.",
+  );
   throw error;
 }
 
@@ -33,5 +35,7 @@ if (gzipBytes > hardLimitGzipBytes) {
 }
 
 if (gzipBytes > targetGzipBytes) {
-  console.warn("Bundle size warning: gzip size exceeds the target budget but is still under the hard limit.");
+  console.warn(
+    "Bundle size warning: gzip size exceeds the target budget but is still under the hard limit.",
+  );
 }

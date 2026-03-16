@@ -12,3 +12,4 @@
 - Completed `P1.6` by wiring Vitest with `happy-dom`, replacing the placeholder test script, and verifying both a unit test and a Shadow DOM snapshot test pass under `npm test`.
 - Completed `P1.7` by verifying [demo.html](/Users/adamwespiser/projects/sim-my-life/demo.html) already matches the Vite output path and one-line embed contract: it loads `./dist/sim-returns.js` and mounts `<sim-returns-app></sim-returns-app>`.
 - Completed `P1.8` by adding `uPlot` to the project, including it in the build baseline, and verifying the bundled artifact still lands comfortably under the gzip budget at roughly `26.36 KB` gzipped.
+- Completed `P1.9` by adding the initial host-theme token definitions in [src/styling/tokens.ts](/Users/adamwespiser/projects/sim-my-life/src/styling/tokens.ts), linking them from [css-strategy.md](/Users/adamwespiser/projects/sim-my-life/docs/css-strategy.md), and verifying typecheck/build/format checks still pass.

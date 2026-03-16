@@ -43,6 +43,10 @@ The app should not assume:
 
 Define a small set of CSS custom properties at the `:host` level.
 
+Implementation reference:
+
+- the initial token definitions should live in [src/styling/tokens.ts](/Users/adamwespiser/projects/sim-my-life/src/styling/tokens.ts)
+
 Token groups:
 
 - color tokens
