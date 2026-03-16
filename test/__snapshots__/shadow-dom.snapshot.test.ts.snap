@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`shadow DOM snapshot scaffold > serializes a shadow root to a snapshot 1`] = `
+"
+      <section data-testid="fixture-shell">
+        <h1>Snapshot Fixture</h1>
+        <p>Shadow DOM snapshot coverage is wired.</p>
+      </section>
+    "
+`;
