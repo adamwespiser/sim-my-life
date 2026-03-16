@@ -7,3 +7,4 @@
 - Completed `P1.1` by adding [package.json](/Users/adamwespiser/projects/sim-my-life/package.json) and placeholder `build`, `test`, and `verify` scripts that establish the repo's initial command surface for later Vite and test-runner wiring.
 - Completed `P1.2` by adding [tsconfig.json](/Users/adamwespiser/projects/sim-my-life/tsconfig.json), the initial `src/` and `test/` tree, installing TypeScript, and verifying `npm run typecheck` succeeds without configuration errors.
 - Completed `P1.3` by adding a minimal Biome-based lint/format setup, wiring `lint`, `format`, and `format:check` scripts, and verifying both checks pass.
+- Completed `P1.4` by switching the build to [Vite](/Users/adamwespiser/projects/sim-my-life/vite.config.ts) and verifying `npm run build` emits a single `dist/sim-returns.js` bundle.
