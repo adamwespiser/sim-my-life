@@ -23,7 +23,7 @@ try {
 const gzipBytes = gzipSync(bundle).byteLength;
 const rawBytes = bundle.byteLength;
 
-console.log(`Bundle: dist/sim-returns.js`);
+console.log("Bundle: dist/sim-returns.js");
 console.log(`Raw size: ${formatKilobytes(rawBytes)}`);
 console.log(`Gzip size: ${formatKilobytes(gzipBytes)}`);
 console.log(`Target gzip budget: ${formatKilobytes(targetGzipBytes)}`);

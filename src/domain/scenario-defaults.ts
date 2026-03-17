@@ -1,13 +1,13 @@
 import type { ScenarioInput } from "./types";
 
-export const DEFAULT_RETIREMENT_START_YEAR_OFFSET = 25;
+export const DEFAULT_RETIREMENT_START_YEAR_OFFSET = 20;
 
 export function getDefaultScenario(currentYear: number): ScenarioInput {
   return {
-    annualSavings: 12000,
+    annualSavings: 23500,
     currentAnnualSpending: 50000,
-    currentPortfolio: 50000,
-    numberOfSimulations: 5000,
+    currentPortfolio: 100000,
+    numberOfSimulations: 1000,
     retirementStartYear: currentYear + DEFAULT_RETIREMENT_START_YEAR_OFFSET,
     retirementStrategy: {
       annualInflationAdjustment: 0.025,

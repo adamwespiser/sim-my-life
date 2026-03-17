@@ -260,15 +260,15 @@ Default values should feel realistic for a first interaction and can differ from
 
 Suggested defaults for the first design pass:
 
-- current portfolio: `50000`
-- annual savings amount: `12000`
-- retirement start year: current year plus `25`
+- current portfolio: `100000`
+- annual savings amount: `23500`
+- retirement start year: current year plus `20`
 - years in retirement: `30`
 - retirement strategy: `fixed dollars`
 - retirement spending amount: `50000`
 - annual inflation adjustment: `2.5%`
 - withdrawal rate default for percentage mode: `4%`
-- number of simulations: `5000`
+- number of simulations: `1000`
 - seed: internal only, derived from current Unix time in seconds at simulation start
 
 ### 6.6 Output Bands

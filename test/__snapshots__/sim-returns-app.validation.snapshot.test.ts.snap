@@ -1,0 +1,722 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`sim returns app validation shell > renders the invalid state markup when the scenario fails validation 1`] = `
+"
+      <style>
+
+:host {
+  --sr-chart-band: rgba(15, 118, 110, 0.18);
+  --sr-chart-failure: #b42318;
+  --sr-chart-median: #0f766e;
+  --sr-chart-path: rgba(31, 26, 23, 0.14);
+  --sr-chart-retirement: #b7791f;
+  --sr-color-accent: #0f766e;
+  --sr-color-accent-soft: #d7efe9;
+  --sr-color-bg: #f4efe6;
+  --sr-color-border: rgba(31, 26, 23, 0.12);
+  --sr-color-fg: #1f1a17;
+  --sr-color-muted: #5b534d;
+  --sr-color-surface: #fffaf4;
+  --sr-font-body: Georgia, "Times New Roman", serif;
+  --sr-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --sr-motion-base: 180ms;
+  --sr-motion-fast: 120ms;
+  --sr-radius-lg: 24px;
+  --sr-radius-md: 16px;
+  --sr-radius-sm: 10px;
+  --sr-space-1: 4px;
+  --sr-space-2: 8px;
+  --sr-space-3: 12px;
+  --sr-space-4: 16px;
+  --sr-space-5: 24px;
+  --sr-space-6: 32px;
+  --sr-space-7: 48px;
+  --sr-space-8: 64px;
+  display: block;
+  inline-size: 100%;
+  box-sizing: border-box;
+  background: var(--sr-color-bg);
+  color: var(--sr-color-fg);
+  font-family: var(--sr-font-body);
+}
+
+:host([hidden]) {
+  display: none;
+}
+
+:host,
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
+}
+
+:host * {
+  min-width: 0;
+}
+
+:host button,
+:host input,
+:host select,
+:host textarea {
+  color: inherit;
+  font: inherit;
+}
+
+:host img,
+:host canvas,
+:host svg {
+  display: block;
+  max-inline-size: 100%;
+}
+
+
+:host {
+  padding: var(--sr-space-4);
+}
+
+.shell {
+  display: grid;
+  gap: var(--sr-space-4);
+  margin-inline: auto;
+  max-inline-size: 1120px;
+}
+
+.panel {
+  border: 1px solid var(--sr-color-border);
+  border-radius: var(--sr-radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.92)),
+    var(--sr-color-surface);
+  box-shadow: 0 18px 40px rgba(31, 26, 23, 0.08);
+  padding: var(--sr-space-5);
+}
+
+.intro {
+  display: grid;
+  gap: var(--sr-space-3);
+  background:
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.14), transparent 35%),
+    linear-gradient(135deg, rgba(255, 250, 244, 0.95), rgba(244, 239, 230, 0.9));
+}
+
+.eyebrow {
+  color: var(--sr-color-accent);
+  font-family: var(--sr-font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.02;
+  margin: 0;
+}
+
+.lede,
+.methodology-copy,
+.source-note,
+.placeholder-copy,
+.card-meta {
+  color: var(--sr-color-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.summary-grid,
+.distribution-grid {
+  display: grid;
+  gap: var(--sr-space-3);
+}
+
+.summary-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.distribution-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card,
+.distribution-card,
+.placeholder {
+  border: 1px solid var(--sr-color-border);
+  border-radius: var(--sr-radius-md);
+  background: rgba(255, 255, 255, 0.72);
+  padding: var(--sr-space-4);
+}
+
+.card-label,
+.distribution-label,
+.section-label {
+  color: var(--sr-color-muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  margin: 0 0 var(--sr-space-2);
+  text-transform: uppercase;
+}
+
+.card-value {
+  font-size: 1.7rem;
+  line-height: 1.1;
+  margin: 0 0 var(--sr-space-2);
+}
+
+.spending-panel {
+  border: 1px solid var(--sr-color-border);
+  border-radius: var(--sr-radius-md);
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.82)),
+    rgba(255, 255, 255, 0.72);
+  display: grid;
+  gap: var(--sr-space-3);
+  margin-top: var(--sr-space-3);
+  padding: var(--sr-space-4);
+}
+
+.spending-panel[data-mode="percent-of-portfolio"] {
+  background:
+    linear-gradient(135deg, rgba(183, 121, 31, 0.12), rgba(255, 255, 255, 0.82)),
+    rgba(255, 255, 255, 0.72);
+}
+
+.spending-panel-title {
+  font-size: 1.2rem;
+  margin: 0 0 var(--sr-space-2);
+}
+
+.spending-panel-copy {
+  display: grid;
+  gap: var(--sr-space-2);
+}
+
+.spending-panel-details {
+  display: grid;
+  gap: var(--sr-space-2);
+  margin: 0;
+}
+
+.spending-panel-row {
+  align-items: baseline;
+  display: flex;
+  font-family: var(--sr-font-mono);
+  gap: var(--sr-space-2);
+  justify-content: space-between;
+}
+
+.spending-panel-row dt {
+  color: var(--sr-color-muted);
+}
+
+.spending-panel-row dd {
+  margin: 0;
+}
+
+.controls-grid {
+  display: grid;
+  gap: var(--sr-space-3);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: var(--sr-space-2);
+}
+
+.field[hidden] {
+  display: none;
+}
+
+.field[data-invalid="true"] input,
+.field[data-invalid="true"] select {
+  border-color: #b42318;
+  box-shadow: 0 0 0 3px rgba(180, 35, 24, 0.12);
+}
+
+.field label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field button {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--sr-color-border);
+  border-radius: var(--sr-radius-sm);
+  padding: 0.78rem 0.92rem;
+  transition:
+    border-color var(--sr-motion-fast) ease,
+    transform var(--sr-motion-fast) ease,
+    box-shadow var(--sr-motion-fast) ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field button:focus {
+  border-color: var(--sr-color-accent);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sr-space-2);
+  margin-top: var(--sr-space-3);
+}
+
+.actions button {
+  align-items: center;
+  display: inline-flex;
+  flex: 1 1 220px;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  min-block-size: 56px;
+  padding: 0.95rem 1.35rem;
+}
+
+.status-stack {
+  display: grid;
+  gap: var(--sr-space-3);
+}
+
+.status-badge {
+  align-items: center;
+  background: rgba(15, 118, 110, 0.1);
+  border-radius: 999px;
+  color: var(--sr-color-accent);
+  display: inline-flex;
+  font-family: var(--sr-font-mono);
+  font-size: 0.78rem;
+  gap: var(--sr-space-2);
+  letter-spacing: 0.06em;
+  padding: 0.42rem 0.72rem;
+  text-transform: uppercase;
+}
+
+.status-badge[data-state="error"],
+.status-badge[data-state="invalid"] {
+  background: rgba(180, 35, 24, 0.1);
+  color: #8f291d;
+}
+
+.status-badge[data-state="scheduled"],
+.status-badge[data-state="canceled"] {
+  background: rgba(183, 121, 31, 0.12);
+  color: #8f5b17;
+}
+
+.status-list {
+  display: grid;
+  gap: var(--sr-space-2);
+  margin: 0;
+}
+
+.status-row {
+  align-items: baseline;
+  display: flex;
+  gap: var(--sr-space-2);
+  justify-content: space-between;
+}
+
+.status-row dt {
+  color: var(--sr-color-muted);
+}
+
+.status-row dd {
+  font-family: var(--sr-font-mono);
+  margin: 0;
+}
+
+.validation-block {
+  border: 1px solid rgba(180, 35, 24, 0.18);
+  border-radius: var(--sr-radius-md);
+  background: rgba(180, 35, 24, 0.06);
+  margin-top: var(--sr-space-3);
+  padding: var(--sr-space-3);
+}
+
+.validation-block ul {
+  color: #7a271a;
+  margin: var(--sr-space-2) 0 0;
+  padding-left: 1.2rem;
+}
+
+.button-primary {
+  background: var(--sr-color-accent);
+  border-color: transparent;
+  color: #fff;
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.placeholder {
+  min-block-size: 180px;
+}
+
+.chart-section {
+  display: grid;
+  gap: var(--sr-space-4);
+}
+
+.chart-card {
+  display: grid;
+  gap: var(--sr-space-3);
+}
+
+.run-state-panel {
+  display: grid;
+  gap: var(--sr-space-2);
+}
+
+.chart-meta {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sr-space-2);
+}
+
+.chart-frame {
+  border: 1px solid var(--sr-color-border);
+  border-radius: var(--sr-radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.96)),
+    var(--sr-color-surface);
+  overflow: hidden;
+  padding: var(--sr-space-2);
+}
+
+.chart-svg {
+  inline-size: 100%;
+}
+
+.chart-axis {
+  fill: var(--sr-color-muted);
+  font-family: var(--sr-font-mono);
+  font-size: 11px;
+}
+
+.chart-retirement-zone {
+  fill: rgba(183, 121, 31, 0.08);
+}
+
+.chart-retirement-line {
+  stroke: var(--sr-chart-retirement);
+  stroke-dasharray: 6 4;
+  stroke-width: 2;
+}
+
+.chart-band {
+  fill: var(--sr-chart-band);
+}
+
+.chart-line {
+  fill: none;
+  stroke: var(--sr-chart-path);
+  stroke-width: 1.6;
+}
+
+.chart-line-median {
+  fill: none;
+  stroke: var(--sr-chart-median);
+  stroke-width: 2.75;
+}
+
+.chart-hover-line {
+  stroke: var(--sr-color-accent);
+  stroke-dasharray: 3 4;
+  stroke-width: 1.5;
+}
+
+.chart-failure-marker {
+  fill: var(--sr-chart-failure);
+}
+
+.chart-hitbox {
+  fill: transparent;
+  cursor: pointer;
+}
+
+.distribution-bars {
+  block-size: 120px;
+  inline-size: 100%;
+}
+
+.distribution-axis {
+  color: var(--sr-color-muted);
+  display: grid;
+  font-family: var(--sr-font-mono);
+  font-size: 0.76rem;
+  gap: var(--sr-space-1);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: var(--sr-space-2);
+}
+
+.distribution-axis span:nth-child(2) {
+  text-align: center;
+}
+
+.distribution-axis span:nth-child(3) {
+  text-align: right;
+}
+
+.distribution-bar {
+  fill: var(--sr-color-accent);
+}
+
+.distribution-stats {
+  display: grid;
+  gap: var(--sr-space-2);
+  margin-top: var(--sr-space-3);
+}
+
+.distribution-stat-row {
+  align-items: baseline;
+  display: flex;
+  font-family: var(--sr-font-mono);
+  justify-content: space-between;
+}
+
+.distribution-caption {
+  color: var(--sr-color-muted);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  margin: 0 0 var(--sr-space-3);
+}
+
+.methodology-list {
+  display: grid;
+  gap: var(--sr-space-2);
+  margin: var(--sr-space-3) 0 0;
+  padding-left: 1.2rem;
+}
+
+@media (min-width: 840px) {
+  :host {
+    padding: var(--sr-space-5);
+  }
+
+  .shell {
+    gap: var(--sr-space-5);
+  }
+
+}
+</style>
+      <div class="shell">
+        <section class="panel intro" data-testid="intro">
+          <p class="eyebrow">Historical bootstrap planning tool</p>
+          <h1 class="title">Simulate a savings path before the chart arrives.</h1>
+          <p class="lede">
+            Start with the defaults, then adjust your current portfolio, yearly savings,
+            retirement timing, and spending strategy. Run the simulation to compare
+            pessimistic, typical, and optimistic paths across retirement.
+          </p>
+        </section>
+
+        <section class="panel" data-testid="controls">
+          <p class="section-label">Inputs</p>
+          <h2 class="section-title">Scenario controls</h2>
+          <div class="controls-grid">
+            <div class="field" data-invalid="true">
+              <label for="current-portfolio">Current portfolio</label>
+              <input id="current-portfolio" type="text" inputmode="decimal" spellcheck="false" value="-1">
+            </div>
+            <div class="field" data-invalid="false">
+              <label for="annual-savings">Annual savings amount</label>
+              <input id="annual-savings" type="text" inputmode="decimal" spellcheck="false" value="23500">
+            </div>
+            <div class="field" data-invalid="false">
+              <label for="retirement-start-year">Retirement start year</label>
+              <input id="retirement-start-year" type="text" inputmode="numeric" spellcheck="false" value="2050">
+            </div>
+            <div class="field" data-invalid="false">
+              <label for="years-in-retirement">Years in retirement</label>
+              <input id="years-in-retirement" type="text" inputmode="numeric" spellcheck="false" value="30">
+            </div>
+            <div class="field">
+              <label for="retirement-mode">Retirement spending strategy</label>
+              <select id="retirement-mode">
+                <option value="fixed-dollars" selected="">Fixed dollars</option>
+                <option value="percent-of-portfolio">Percent of portfolio</option>
+              </select>
+            </div>
+            <div class="field" data-field="fixed-dollars" data-invalid="false">
+              <label for="annual-spending">Annual retirement spending</label>
+              <input id="annual-spending" type="text" inputmode="decimal" spellcheck="false" value="50000">
+            </div>
+            <div class="field" data-field="fixed-dollars" data-invalid="false">
+              <label for="inflation-adjustment">Annual inflation adjustment (%)</label>
+              <input id="inflation-adjustment" type="text" inputmode="decimal" spellcheck="false" value="2.5">
+            </div>
+            <div class="field" data-field="percent-of-portfolio" data-invalid="false" hidden="">
+              <label for="withdrawal-rate">Retirement withdrawal rate (%)</label>
+              <input id="withdrawal-rate" type="text" inputmode="decimal" spellcheck="false" value="4">
+            </div>
+            <div class="field" data-invalid="false">
+              <label for="simulation-count">Number of simulations</label>
+              <input id="simulation-count" type="text" inputmode="numeric" spellcheck="false" value="1000">
+            </div>
+          </div>
+          <div class="actions">
+            <button class="button-primary" data-action="run" type="button">Run Simulation</button>
+            <button class="button-secondary" data-action="reset" type="button">Reset to defaults</button>
+          </div>
+          
+      <div class="validation-block" data-testid="validation-errors">
+        <p class="card-label">Validation issues</p>
+        <ul>
+          <li>currentPortfolio must be greater than or equal to 0</li>
+        </ul>
+      </div>
+    
+        </section>
+
+        <section class="panel" data-testid="summary">
+          <p class="section-label">Summary</p>
+          <h2 class="section-title">Retirement readiness</h2>
+          
+        <div class="summary-grid">
+          <article class="card">
+            <p class="card-label">Retirement balance</p>
+            <p class="card-value">Pending</p>
+            <p class="card-meta">Will show pessimistic, median, and optimistic values.</p>
+          </article>
+          <article class="card">
+            <p class="card-label">End balance</p>
+            <p class="card-value">Pending</p>
+            <p class="card-meta">Will summarize the end of the retirement horizon.</p>
+          </article>
+          <article class="card">
+            <p class="card-label">Plan survival</p>
+            <p class="card-value">Pending</p>
+            <p class="card-meta">Will report the probability of not hitting zero.</p>
+          </article>
+          <article class="card">
+            <p class="card-label">Total contributions</p>
+            <p class="card-value">$470,000</p>
+            <p class="card-meta">Based on the accumulation years in the current scenario.</p>
+          </article>
+        </div>
+      
+          
+      <article class="spending-panel" data-testid="spending-panel" data-mode="fixed-dollars">
+        <div class="spending-panel-copy">
+          <p class="section-label">Spending panel</p>
+          <h3 class="spending-panel-title">Fixed spending target</h3>
+          <p class="placeholder-copy">Run the simulation to see how often this inflation-adjusted target survives retirement.</p>
+        </div>
+        <dl class="spending-panel-details">
+          
+                <div class="spending-panel-row">
+                  <dt>Year 1 target</dt>
+                  <dd>$50,000</dd>
+                </div>
+              
+                <div class="spending-panel-row">
+                  <dt>Year 30 target</dt>
+                  <dd>$102,320</dd>
+                </div>
+              
+                <div class="spending-panel-row">
+                  <dt>Inflation adjustment</dt>
+                  <dd>2.5%</dd>
+                </div>
+              
+        </dl>
+      </article>
+    
+        </section>
+
+        <section class="panel chart-section" data-testid="chart">
+          <div class="run-state-panel" data-testid="run-state-panel">
+            <p class="section-label">Run state</p>
+            <h2 class="section-title">Simulation status</h2>
+            <div class="placeholder" data-testid="run-state">
+              
+      <div class="status-stack">
+        <span class="status-badge" data-state="invalid" data-testid="run-status-badge">
+          invalid
+        </span>
+        <p class="placeholder-copy" data-testid="run-status-message">Fix validation errors before running a simulation.</p>
+        <dl class="status-list">
+          <div class="status-row">
+            <dt>Completed paths</dt>
+            <dd data-testid="run-progress">0 / 1000</dd>
+          </div>
+          <div class="status-row">
+            <dt>Resolved seed</dt>
+            <dd data-testid="run-seed">Pending</dd>
+          </div>
+        </dl>
+      </div>
+    
+            </div>
+          </div>
+          <div data-testid="chart-panel">
+            <p class="section-label">Primary chart</p>
+            <h2 class="section-title">Portfolio paths across time</h2>
+            
+        <div class="placeholder">
+          <p class="placeholder-copy">
+            The chart container is ready. Run a simulation to draw sample paths, percentile bands,
+            and the retirement boundary.
+          </p>
+        </div>
+      
+          </div>
+        </section>
+
+        <section class="panel" data-testid="distributions">
+          <p class="section-label">Hover distributions</p>
+          <h2 class="section-title">Three yearly views at once</h2>
+          
+        <div class="distribution-grid">
+          <article class="distribution-card">
+            <p class="distribution-label">Investment income</p>
+            <p class="placeholder-copy">Shows gains or losses from market returns in the hovered year.</p>
+          </article>
+          <article class="distribution-card">
+            <p class="distribution-label">Retirement withdrawals</p>
+            <p class="placeholder-copy">Shows actual withdrawals after annual growth is applied.</p>
+          </article>
+          <article class="distribution-card">
+            <p class="distribution-label">Account assets</p>
+            <p class="placeholder-copy">Shows end-of-year balances for the selected modeled year.</p>
+          </article>
+        </div>
+      
+        </section>
+
+        <section class="panel" data-testid="methodology">
+          <p class="section-label">Methodology</p>
+          <h2 class="section-title">What this model assumes</h2>
+          <p class="methodology-copy">
+            The app samples from bundled annual S&amp;P 500 total returns, applies annual growth,
+            adds savings before retirement, and applies withdrawals during retirement. Results are
+            simulated rather than guaranteed.
+          </p>
+          <ul class="methodology-list">
+            <li>Savings and withdrawals are modeled annually for clarity.</li>
+            <li>Fixed-dollar plans can include annual inflation adjustments.</li>
+            <li>Percent-of-portfolio plans produce variable yearly retirement income.</li>
+            <li>Created for educational purposes by non-financial advisors. <strong>Not financial advice.</strong></li>
+          </ul>
+          <p class="source-note">
+            Data source: Aswath Damodaran historical returns table,
+            1928-2025.
+          </p>
+        </section>
+      </div>
+    "
+`;

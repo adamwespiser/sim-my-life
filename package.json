@@ -8,7 +8,9 @@
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint .",
+    "perf": "npm run build && node scripts/measure-default-scenario.mjs",
     "size": "node scripts/check-bundle-size.mjs",
+    "smoke": "npm run build && node scripts/smoke-demo.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
@@ -16,10 +18,11 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@types/node": "^25.5.0",
     "happy-dom": "^16.8.1",
     "typescript": "^5.8.2",
     "uplot": "^1.6.31",
-    "vitest": "^3.0.8",
-    "vite": "^6.2.1"
+    "vite": "^6.2.1",
+    "vitest": "^3.0.8"
   }
 }
