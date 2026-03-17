@@ -1,5 +1,7 @@
 # Sim My Life
 
+[View my live](https://wespiser.com/app/sim-my-life.html)
+
 An embeddable retirement-planning simulator shipped as a single custom element:
 
 ```html
